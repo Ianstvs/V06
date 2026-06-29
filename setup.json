@@ -1,0 +1,65 @@
+{
+    "dataset_treatment" : true ,
+    "column_name_of_id" : "ID" ,
+    "column_name_of_property" : "SOL" ,
+    "column_name_of_smiles" : "SMILES" ,
+    "dataset_path" : "./datasets/data.csv" ,
+
+    "node_features" : [0,1,2,3,4,5,6,7] ,
+    "test_dataset_ratio" : 0.1 ,
+    "validation_dataset_ratio" : 0.1 ,
+    "number_of_epochs" : 1500 , 
+    
+    "plot_best_trials" : false ,
+
+    "early_stopping" : true ,    
+    "early_stop_handicap" : 50 , 
+    "early_stop_patience" : 150 ,
+
+    "random_states_list" : [0] ,
+    "random_seeds_list" : [0] ,
+
+    "optimizers_list" :[0,1,2,3,4,5,6,7,8] ,
+    "loss_functions_list" : [0,1,2,3] ,
+    "learning_rates_list" : [0.01,0.001,0.0001] ,
+    "batch_sizes_list" : [256] , 
+    "activation_functions_list" : [5] ,
+    "number_of_layers_list" : [3,4] ,
+    "number_of_neurons_list" : [256] ,   
+
+    "learning_rate_scheduler" : true ,
+    "cosine_annealing_scheduler" : true ,
+    "scheduler_factor" : 0.5 ,
+    "scheduler_patience" : 30 ,
+
+
+    "hyperparameter_optimizer" : true ,
+    "hyperparameter_optimizer_trials" : 100 ,
+    "hyperparameter_optimizer_timeout" : null ,
+    "hyperparameter_optimizer_patience" : 30 ,
+    "batch_size_range" : [8,128] ,
+    "learning_rate_range" : [10e-4,10e-1] ,
+    "force_batch_size_value" :256,
+
+    "architecture_optimizer" : true ,
+    "optimize_width" : true ,
+    "width_optimization_space" : [16,256] ,
+    "architecture_optimizer_trials" : 1000 , 
+    "architecture_optimizer_timeout" : null ,
+    "architecture_optimizer_patience" :50 ,
+
+    "feature_optimization" : false ,
+    "feature_optimizer_trials" : 200 ,
+    "feature_optimizer_timeout" : null ,
+    "feature_optimizer_patience" : 25 ,
+
+    "minimum_best_score" : 0.2  ,
+    "cross_validation" : false ,
+    "k_folds" : 10 ,
+
+    "use_wandb" : true ,
+    "project_name" : "01234567sol256" ,
+    "use_optuna_db" : true ,
+
+    "model" : "GCNConv"    
+}
